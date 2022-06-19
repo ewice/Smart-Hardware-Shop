@@ -1,0 +1,30 @@
+<aside>
+  <h2>Cart</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col" class="text-end">Price</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cartItem of cartItems">
+        <td>{{ cartItem.product.title }}</td>
+        <td class="text-end">{{ cartItem.product.price }} €</td>
+        <td>
+          <button type="button" (click)="deleteCartItem(cartItem.id)">
+            <img src="../../assets/trash.svg" alt="Delete"/>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="fw-bold">Total</td>
+        <td class="fw-bold text-end">{{ totalAmount }} €</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</aside>

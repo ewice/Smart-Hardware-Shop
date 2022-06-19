@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="searchProduct()" (keyup.enter)="searchProduct()">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" aria-describedby="basic-addon2" formControlName="title"/>
+    <div class="input-group-append">
+      <button type="submit" class="btn btn-primary" id="basic-addon2">
+        <img src="../../../assets/search.svg" alt="Search">
+      </button>
+    </div>
+  </div>
+</form>

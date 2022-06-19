@@ -1,0 +1,10 @@
+<div class="row" *ngIf="productService.getProducts$() | async as products">
+  <ng-container *ngIf="products.length > 0; else noProducts">
+    <article *ngFor="let product of products" class="col-3 my-3">
+      <app-product [product]="product"></app-product>
+    </article>
+  </ng-container>
+  <ng-template #noProducts>
+    <p>No products found</p>
+  </ng-template>
+</div>

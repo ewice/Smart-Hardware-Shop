@@ -1,0 +1,22 @@
+{
+  "changelogDate": "20220618190632",
+  "clientRootFolder": "backend",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "backend",
+  "name": "CartItem",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "product",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "service": "serviceClass"
+}
